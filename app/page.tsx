@@ -1,10 +1,14 @@
+import dynamic from "next/dynamic";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
-import ThreeBackground from "@/components/ThreeBackground";
 import { Phone, Mail, Clock, MapPin, Zap } from "lucide-react";
+
+const ThreeBackground = dynamic(() => import("@/components/ThreeBackground"), {
+  ssr: false,
+});
 
 export default function Page() {
   return (
