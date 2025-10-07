@@ -1,16 +1,17 @@
-"use client";
 import NavBar from "@/components/NavBar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
 import ThreeBackground from "@/components/ThreeBackground";
+import ClientOnly from "@/components/ClientOnly";
 import { Phone, Mail, Clock, MapPin, Zap } from "lucide-react";
 
 export default function Page() {
   return (
     <main className="overflow-hidden">
-      <NavBar />
+      <ClientOnly>
+        <NavBar />
       <section className="relative">
         <ThreeBackground />
         <Hero />
@@ -128,6 +129,7 @@ export default function Page() {
           </div>
         </div>
       </footer>
+      </ClientOnly>
     </main>
   );
 }
