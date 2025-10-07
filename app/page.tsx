@@ -12,14 +12,14 @@ export default function Page() {
     <main className="overflow-hidden">
       <ClientOnly>
         <NavBar />
-      <section className="relative">
-        <ThreeBackground />
-        <Hero />
-      </section>
-      <Services />
-      <Testimonials />
-      
-      <section id="contact" className="py-16 lg:py-24 bg-gradient-to-b from-white via-zinc-50 to-white dark:from-zinc-900 dark:via-zinc-900/50 dark:to-zinc-900">
+        <section className="relative">
+          <ThreeBackground />
+          <Hero />
+        </section>
+        <Services />
+        <Testimonials />
+        
+        <section id="contact" className="py-16 lg:py-24 bg-gradient-to-b from-white via-zinc-50 to-white dark:from-zinc-900 dark:via-zinc-900/50 dark:to-zinc-900">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="inline-block px-4 py-2 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-900 dark:text-amber-200 text-sm font-medium mb-4">
@@ -110,9 +110,9 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </section>
-      
-      <footer className="py-12 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
+        </section>
+        
+        <footer className="py-12 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
         <div className="container">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 font-bold text-lg">
@@ -128,7 +128,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </footer>
+        </footer>
       </ClientOnly>
     </main>
   );
