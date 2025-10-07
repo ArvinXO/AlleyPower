@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Phone, Menu, X, Zap } from "lucide-react";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -53,7 +53,7 @@ export default function NavBar() {
       
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -89,7 +89,7 @@ export default function NavBar() {
                 <Phone className="h-4 w-4" /> Call Now
               </a>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </header>

@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Link from "next/link";
 import { Zap, Shield, Clock } from "lucide-react";
 
@@ -15,7 +15,7 @@ export default function Hero() {
       
       <div className="container relative z-10 grid lg:grid-cols-2 gap-12 py-16 lg:py-24 items-center">
         <div>
-          <motion.div 
+          <m.div 
             initial={{opacity:0,y:20}} 
             animate={{opacity:1,y:0}} 
             transition={{delay:0.1, duration:0.6}}
@@ -25,27 +25,27 @@ export default function Hero() {
               <Zap className="h-4 w-4" />
               Licensed & Insured Electrician
             </span>
-          </motion.div>
+          </m.div>
           
-          <motion.h1 
+          <m.h1 
             initial={{opacity:0,y:20}} 
             animate={{opacity:1,y:0}} 
             transition={{delay:0.2, duration:0.6}}
             className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-br from-zinc-900 via-zinc-800 to-amber-900 dark:from-white dark:via-zinc-100 dark:to-amber-200 bg-clip-text text-transparent"
           >
             Powering Your Space Safely
-          </motion.h1>
+          </m.h1>
           
-          <motion.p 
+          <m.p 
             initial={{opacity:0,y:20}} 
             animate={{opacity:1,y:0}} 
             transition={{delay:0.3, duration:0.6}}
             className="mt-6 text-xl text-zinc-600 dark:text-zinc-300 leading-relaxed"
           >
             Expert electrical services for homes and businesses. From EV chargers to complete rewires, we deliver quality workmanship with a smile.
-          </motion.p>
+          </m.p>
           
-          <motion.div 
+          <m.div 
             initial={{opacity:0,y:20}} 
             animate={{opacity:1,y:0}} 
             transition={{delay:0.4, duration:0.6}}
@@ -64,9 +64,9 @@ export default function Hero() {
             >
               View Services
             </Link>
-          </motion.div>
+          </m.div>
           
-          <motion.div 
+          <m.div 
             initial={{opacity:0}} 
             animate={{opacity:1}} 
             transition={{delay:0.6, duration:0.6}}
@@ -84,10 +84,10 @@ export default function Hero() {
               <Zap className="h-5 w-5 text-amber-600 dark:text-amber-400" />
               <span>Same Day Service</span>
             </div>
-          </motion.div>
+          </m.div>
         </div>
         
-        <motion.div 
+        <m.div 
           initial={{opacity:0,scale:0.95,rotateY:10}} 
           animate={{opacity:1,scale:1,rotateY:0}} 
           transition={{delay:0.3, duration:0.8}}
@@ -103,7 +103,7 @@ export default function Hero() {
             />
           </div>
           {/* Floating badge */}
-          <motion.div
+          <m.div
             initial={{opacity:0,y:20}}
             animate={{opacity:1,y:0}}
             transition={{delay:0.8, duration:0.6}}
@@ -118,8 +118,8 @@ export default function Hero() {
                 <div className="text-sm text-zinc-600 dark:text-zinc-400">Happy Clients</div>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 "use client";
 import { type LucideIcon } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const item = {
   hidden: { opacity: 0, y: 20 },
@@ -21,7 +21,7 @@ export default function ServiceCard({
   index: number;
 }) {
   return (
-    <motion.div 
+    <m.div 
       variants={item}
       whileHover={{ y: -8, scale: 1.02 }}
       transition={{ duration: 0.3 }}
@@ -46,6 +46,6 @@ export default function ServiceCard({
       
       {/* Decorative corner element */}
       <div className={`absolute -bottom-8 -right-8 w-24 h-24 bg-gradient-to-br ${color} opacity-10 rounded-full blur-2xl group-hover:opacity-20 transition-opacity`} />
-    </motion.div>
+    </m.div>
   );
 }

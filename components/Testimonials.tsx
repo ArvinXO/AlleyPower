@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 
 const testimonials = [
@@ -28,7 +28,7 @@ export default function Testimonials() {
     <section id="testimonials" className="py-16 lg:py-24 bg-gradient-to-b from-white via-amber-50/30 to-white dark:from-zinc-900 dark:via-amber-950/10 dark:to-zinc-900">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -43,12 +43,12 @@ export default function Testimonials() {
             <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-300">
               Don&apos;t just take our word for it
             </p>
-          </motion.div>
+          </m.div>
         </div>
         
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, index) => (
-            <motion.figure
+            <m.figure
               key={t.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ export default function Testimonials() {
                   <p className="text-sm text-zinc-600 dark:text-zinc-400">{t.role}</p>
                 </div>
               </div>
-            </motion.figure>
+            </m.figure>
           ))}
         </div>
       </div>

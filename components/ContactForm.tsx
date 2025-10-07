@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
 export default function ContactForm() {
@@ -66,7 +66,7 @@ export default function ContactForm() {
         />
       </div>
       
-      <motion.button 
+      <m.button 
         disabled={status==="loading"}
         whileHover={{ scale: status === "loading" ? 1 : 1.02 }}
         whileTap={{ scale: status === "loading" ? 1 : 0.98 }}
@@ -83,28 +83,28 @@ export default function ContactForm() {
             Send Message
           </>
         )}
-      </motion.button>
+      </m.button>
       
       {status === "done" && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center gap-2 p-4 rounded-xl bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-700 dark:text-green-300"
         >
           <CheckCircle className="h-5 w-5" />
           <p className="text-sm font-medium">Thanks! We&apos;ll be in touch soon.</p>
-        </motion.div>
+        </m.div>
       )}
       
       {status === "error" && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center gap-2 p-4 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300"
         >
           <AlertCircle className="h-5 w-5" />
           <p className="text-sm font-medium">Something went wrong. Please try again.</p>
-        </motion.div>
+        </m.div>
       )}
     </form>
   );

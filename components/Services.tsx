@@ -1,7 +1,7 @@
 "use client";
 import ServiceCard from "./ServiceCard";
 import { Plug, Bolt, Gauge, ShieldCheck } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
 const items = [
   { Icon: Plug, title: "Domestic Electrics", desc: "Sockets, lighting, fault finding, consumer units, EICR", color: "from-blue-500 to-cyan-500" },
@@ -25,7 +25,7 @@ export default function Services() {
     <section id="services" className="py-16 lg:py-24 bg-gradient-to-b from-white via-zinc-50 to-white dark:from-zinc-900 dark:via-zinc-900/50 dark:to-zinc-900">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -40,10 +40,10 @@ export default function Services() {
             <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-300">
               Transparent pricing · Professional workmanship · Fully insured
             </p>
-          </motion.div>
+          </m.div>
         </div>
         
-        <motion.div 
+        <m.div 
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -53,7 +53,7 @@ export default function Services() {
           {items.map((i, index) => (
             <ServiceCard key={i.title} {...i} index={index} />
           ))}
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );
