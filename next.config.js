@@ -10,10 +10,6 @@ const nextConfig = {
       exclude: ["error"],
     },
   },
-  webpack: (config) => {
-    config.externals = [...(config.externals || []), { canvas: 'canvas' }];
-    return config;
-  },
   images: {
     formats: ["image/avif", "image/webp"],
   },
