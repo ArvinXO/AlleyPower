@@ -15,9 +15,9 @@ export default function ThemeToggle() {
     return (
       <button
         aria-label="Toggle Theme"
-        className="p-2 rounded-md border border-zinc-200 dark:border-zinc-800"
+        className="p-3 rounded-2xl bg-white/80 dark:bg-slate-800/80 border border-white/20 dark:border-slate-700/50 backdrop-blur-sm shadow-lg"
       >
-        <div className="h-4 w-4" />
+        <div className="h-5 w-5" />
       </button>
     );
   }
@@ -28,9 +28,9 @@ export default function ThemeToggle() {
     <button
       aria-label="Toggle Theme"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="p-2 rounded-md border border-zinc-200 dark:border-zinc-800"
+      className="p-3 rounded-2xl bg-white/80 dark:bg-slate-800/80 border border-white/20 dark:border-slate-700/50 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 backdrop-blur-sm shadow-lg hover:scale-105"
     >
-      {isDark ? <Sun className="h-4 w-4"/> : <Moon className="h-4 w-4"/>}
+      {isDark ? <Sun className="h-5 w-5 text-amber-500"/> : <Moon className="h-5 w-5 text-blue-600"/>}
     </button>
   );
 }
