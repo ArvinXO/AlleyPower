@@ -1,37 +1,24 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
 
-function cspHeader(nonce: string) {
-  const isDev = process.env.NODE_ENV !== "production";
-  const policies = [
-    `default-src 'self'`,
-    `script-src 'self' 'nonce-${nonce}' 'unsafe-eval'${isDev ? "" : ""}`,
-    `style-src 'self' 'unsafe-inline'`,
-    `img-src 'self' data: blob: https:`,
-    `font-src 'self' data:`,
-    `connect-src 'self' https:`,
-    `worker-src 'self' blob:`,
-    `frame-ancestors 'none'`,
-    `base-uri 'self'`,
-    `form-action 'self'`,
-    `object-src 'none'`,
-  ];
-  if (!isDev) {
-    policies.push(`upgrade-insecure-requests`);
-  }
-  return policies.join("; ");
+
+export function middleware(request: NextRequest) {
+  const response = NextResponse.next()
+
+
+  // Add minimal security headers
+  response.headers.set('X-XSS-Protection', '1; mode=block')
+  response.headers.set('X-Content-Type-Options', 'nosniff')
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
+
+
+  return response
 }
 
-export function middleware(req: NextRequest) {
-  const res = NextResponse.next();
-  const nonce = Buffer.from(crypto.randomUUID()).toString("base64");
-
-  res.headers.set("x-nonce", nonce);
-  res.headers.set("Content-Security-Policy", cspHeader(nonce));
-
-  return res;
-}
 
 export const config = {
-  matcher: "/:path*",
-};
+  matcher: [
+    // Only apply to main pages, exclude all special paths
+    '/((?!api|_next|static|.*\\..*).*)',
+  ],
+}

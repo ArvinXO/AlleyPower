@@ -5,13 +5,24 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
+  generateEtags: true,
+  swcMinify: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   compiler: {
-    removeConsole: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ["error"],
-    },
+    } : false,
+  },
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
   images: {
     formats: ["image/avif", "image/webp"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
   },
   async headers() {
     return [
