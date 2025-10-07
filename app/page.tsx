@@ -3,15 +3,18 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import ContactForm from "@/components/ContactForm";
+import ClientOnly from "@/components/ClientOnly";
 import { Phone, Mail, Clock, MapPin, Zap } from "lucide-react";
 
 export default function Page() {
   return (
     <main className="overflow-hidden">
-      <NavBar />
-      <Hero />
-      <Services />
-      <Testimonials />
+      <ClientOnly>
+        <NavBar />
+        <Hero />
+        <Services />
+        <Testimonials />
+      </ClientOnly>
       
       <section id="contact" className="py-16 lg:py-24 bg-gradient-to-b from-white via-zinc-50 to-white dark:from-zinc-900 dark:via-zinc-900/50 dark:to-zinc-900">
         <div className="container">
