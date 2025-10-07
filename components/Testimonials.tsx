@@ -1,31 +1,31 @@
 "use client";
 import { m } from "framer-motion";
-import { Star, Quote, ThumbsUp } from "lucide-react";
+import { Star, Quote, ThumbsUp, Zap } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sophie R.",
+    name: "James M.",
     role: "Homeowner",
-    location: "London",
-    text: "Super quick fault finding and very tidy work. Alex explained everything clearly and the pricing was very fair. Highly recommend!",
+    location: "Clapham, London",
+    text: "Alex completely rewired our Victorian terrace. Incredibly tidy work, explained everything about the 18th Edition requirements. Brilliant electrician!",
     rating: 5,
-    service: "Fault Finding"
+    service: "Full House Rewire"
   },
   {
-    name: "Mike L.",
-    role: "Business Owner", 
-    location: "Surrey",
-    text: "Installed our EV charger perfectly and explained everything. Professional service from start to finish. Will definitely use again.",
+    name: "Sarah T.",
+    role: "Tesla Owner", 
+    location: "Richmond, London",
+    text: "Fantastic EV charger installation. Alex sorted the OZEV grant paperwork and the smart charging app works perfectly. Highly professional!",
     rating: 5,
-    service: "EV Charger Install"
+    service: "EV Charger & OZEV Grant"
   },
   {
-    name: "Aisha K.",
-    role: "Property Manager",
-    location: "Kent", 
-    text: "Professional, fair price, and always on time. We use Alex for all our properties now. Excellent communication throughout.",
+    name: "David K.",
+    role: "Landlord",
+    location: "Wandsworth, London", 
+    text: "Regular EICR testing for my rental properties. Always on time, thorough reports, and competitive pricing. Wouldn't use anyone else.",
     rating: 5,
-    service: "EICR Testing"
+    service: "EICR Certificates"
   }
 ];
 
@@ -41,20 +41,21 @@ export default function Testimonials() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-200/50 dark:border-blue-800/50 text-blue-700 dark:text-blue-300 text-sm font-semibold mb-6 backdrop-blur-sm">
-              Testimonials
+            <span className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-200/50 dark:border-green-800/50 text-green-700 dark:text-green-300 text-sm font-semibold mb-6 backdrop-blur-sm">
+              <ThumbsUp className="inline h-4 w-4 mr-2" />
+              Customer Reviews
             </span>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6">
               <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 dark:from-white dark:via-blue-100 dark:to-indigo-100 bg-clip-text text-transparent">
-                What Our Clients
+                London Customers
               </span>
               <br />
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Say About Us
+              <span className="bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 bg-clip-text text-transparent">
+                Love Our Work
               </span>
             </h2>
             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl mx-auto">
-              Don&apos;t just take our word for it — hear from our satisfied customers
+              Real reviews from real customers across London • Trusted local electrician
             </p>
           </m.div>
         </div>
@@ -81,7 +82,8 @@ export default function Testimonials() {
               </div>
               
               {/* Service badge */}
-              <div className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/10 to-indigo-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold mb-6">
+              <div className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/10 to-yellow-500/10 text-amber-600 dark:text-amber-400 text-xs font-semibold mb-6">
+                <Zap className="inline h-3 w-3 mr-1" />
                 {testimonial.service}
               </div>
               
@@ -99,7 +101,7 @@ export default function Testimonials() {
               
               {/* Author info */}
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">
                   {testimonial.name[0]}
                 </div>
                 <div>
@@ -130,11 +132,11 @@ export default function Testimonials() {
             <div className="flex items-center justify-center gap-3 mb-4">
               <ThumbsUp className="h-8 w-8" />
               <h3 className="text-3xl md:text-4xl font-bold">
-                100% Customer Satisfaction
+                Trusted London Electrician
               </h3>
             </div>
             <p className="text-xl text-green-100 max-w-2xl mx-auto">
-              Join hundreds of satisfied customers who trust us with their electrical needs. Quality work, fair prices, guaranteed.
+              NVQ Level 3 qualified • NICEIC approved • Part P certified • Fully insured • No call out charge for booked work
             </p>
           </div>
         </m.div>

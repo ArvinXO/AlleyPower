@@ -1,37 +1,37 @@
 "use client";
 import ServiceCard from "./ServiceCard";
-import { Plug, Bolt, Gauge, ShieldCheck, ArrowRight } from "lucide-react";
+import { Plug, Bolt, Gauge, ShieldCheck, ArrowRight, Zap, Home, Building2, Car } from "lucide-react";
 import { m } from "framer-motion";
 import Link from "next/link";
 
 const items = [
   { 
-    Icon: Plug, 
-    title: "Domestic Electrics", 
-    desc: "Complete home electrical solutions including sockets, lighting, fault finding, consumer units, and EICR certificates", 
+    Icon: Home, 
+    title: "Domestic Electrical Work", 
+    desc: "Complete residential electrical services across London - from additional sockets to full consumer unit upgrades, all Part P compliant", 
     color: "from-blue-500 to-cyan-500",
-    features: ["Socket Installation", "LED Lighting", "Consumer Units", "EICR Testing"]
+    features: ["Socket & Switch Installation", "LED Lighting Design", "Consumer Unit Upgrades", "Kitchen & Bathroom Electrics"]
   },
   { 
-    Icon: Bolt, 
-    title: "EV Chargers", 
-    desc: "OZEV-approved electric vehicle charging solutions for homes and workplaces with government grant support", 
+    Icon: Car, 
+    title: "EV Charging Points", 
+    desc: "OZEV-approved electric vehicle charging installations with up to £350 government grant support for eligible properties", 
     color: "from-amber-500 to-orange-500",
-    features: ["Home Chargers", "Workplace Install", "OZEV Grants", "Smart Charging"]
+    features: ["7kW & 22kW Chargers", "OZEV Grant Applications", "Smart App Control", "Tethered & Untethered"]
   },
   { 
-    Icon: Gauge, 
-    title: "Rewires & Upgrades", 
-    desc: "Full and partial rewiring services with modern surge protection and RCD safety systems", 
+    Icon: Zap, 
+    title: "Rewiring & Upgrades", 
+    desc: "Full and partial house rewires to 18th Edition standards with RCD protection and surge protection devices", 
     color: "from-purple-500 to-pink-500",
-    features: ["Full Rewires", "Partial Upgrades", "Surge Protection", "RCD Installation"]
+    features: ["Full House Rewires", "Partial Circuit Upgrades", "18th Edition Compliance", "Surge Protection (SPD)"]
   },
   { 
-    Icon: ShieldCheck, 
-    title: "Safety & Compliance", 
-    desc: "Comprehensive electrical safety testing including EICR, PAT testing, and landlord compliance certificates", 
+    Icon: Building2, 
+    title: "Commercial & Testing", 
+    desc: "Commercial electrical installations, maintenance contracts, and comprehensive testing services including EICR and PAT testing", 
     color: "from-green-500 to-emerald-500",
-    features: ["EICR Certificates", "PAT Testing", "Safety Inspections", "Compliance Reports"]
+    features: ["Commercial Installations", "EICR Certificates", "PAT Testing", "Emergency Lighting"]
   },
 ];
 
@@ -57,20 +57,21 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-200/50 dark:border-blue-800/50 text-blue-700 dark:text-blue-300 text-sm font-semibold mb-6 backdrop-blur-sm">
-              Our Services
+            <span className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-amber-500/10 to-yellow-500/10 border border-amber-200/50 dark:border-amber-800/50 text-amber-700 dark:text-amber-300 text-sm font-semibold mb-6 backdrop-blur-sm">
+              <Zap className="inline h-4 w-4 mr-2 animate-pulse" />
+              Professional Electrical Services
             </span>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6">
               <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 dark:from-white dark:via-blue-100 dark:to-indigo-100 bg-clip-text text-transparent">
-                Expert Electrical
+                Qualified Electrician
               </span>
               <br />
-              <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Solutions
+              <span className="bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-500 bg-clip-text text-transparent">
+                London Services
               </span>
             </h2>
             <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl mx-auto">
-              Professional workmanship · Transparent pricing · Fully insured · Same-day service available
+              NVQ Level 3 Qualified · NICEIC Approved · Part P Certified · 18th Edition Compliant
             </p>
           </m.div>
         </div>
@@ -96,19 +97,19 @@ export default function Services() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white shadow-2xl shadow-blue-500/25">
+          <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-3xl p-12 text-white shadow-2xl shadow-amber-500/25">
             <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              Need a Custom Solution?
+              Emergency Call Out Available
             </h3>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Every project is unique. Get in touch for a free consultation and personalized quote tailored to your specific needs.
+            <p className="text-xl text-amber-100 mb-8 max-w-2xl mx-auto">
+              24/7 emergency electrical services across London. No call out charge for booked work. Free quotes and competitive pricing.
             </p>
             <Link 
               href="#contact"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-blue-600 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-amber-600 rounded-2xl font-bold text-lg hover:bg-amber-50 transition-all duration-300 hover:scale-105 hover:-translate-y-1 shadow-lg"
             >
-              Get Free Quote
-              <ArrowRight className="h-5 w-5" />
+              Call Now: +44 7456 569003
+              <Zap className="h-5 w-5 animate-pulse" />
             </Link>
           </div>
         </m.div>

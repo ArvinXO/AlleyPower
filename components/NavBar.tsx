@@ -39,8 +39,8 @@ export default function NavBar() {
         
         <div className="flex items-center gap-4">
           <a 
-            href="tel:+440000000000" 
-            className="hidden sm:inline-flex items-center gap-2 rounded-2xl px-6 py-3 text-sm font-bold bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5"
+            href="tel:+44 7456 569003" 
+            className="hidden sm:inline-flex items-center gap-2 rounded-2xl px-6 py-3 text-sm font-bold bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-xl shadow-amber-500/25 hover:shadow-2xl hover:shadow-amber-500/40 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5"
           >
             <Phone className="h-4 w-4" /> Call Now
           </a>
@@ -95,8 +95,8 @@ export default function NavBar() {
                 <span className="font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Contact</span>
               </Link>
               <a 
-                href="tel:+440000000000"
-                className="flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
+                href="tel:+44 7456 569003"
+                className="flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold shadow-xl shadow-amber-500/25 hover:shadow-2xl hover:shadow-amber-500/40 transition-all duration-300 hover:scale-105"
               >
                 <Phone className="h-5 w-5" /> Call Now
               </a>

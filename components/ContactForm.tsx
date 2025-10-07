@@ -51,7 +51,7 @@ export default function ContactForm() {
           name="phone" 
           type="tel"
           required 
-          placeholder="+44 7700 900000"
+          placeholder="+44"
           className="w-full rounded-2xl border-2 border-slate-200 dark:border-slate-700 px-6 py-4 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all duration-300 text-slate-900 dark:text-white placeholder:text-slate-500 dark:placeholder:text-slate-400"
         />
       </div>
@@ -115,7 +115,7 @@ export default function ContactForm() {
           </div>
           <div>
             <p className="font-bold text-lg">Something went wrong</p>
-            <p className="text-sm opacity-90">Please try again or call us directly at +44 00 0000 0000</p>
+            <p className="text-sm opacity-90">Please try again or call us directly at +44 7456 569003</p>
           </div>
         </m.div>
       )}
